@@ -1,0 +1,4 @@
+LIMINF=1
+LIMSUP=5
+SLEEPTIME=`expr $RANDOM`
+echo $RANDOM %10 +10|bc
