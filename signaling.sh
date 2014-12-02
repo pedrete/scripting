@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 temp=`mktemp`
 echo $temp
-#trap 'rm -f $temp' EXIT
-trap "echo sigint " SIGINT  SIGTERM
+trap "echo signal  " SIGUSR1 EXIT
 echo "pid es $$"
+while true; do sleep 1; done
 
-while true; do 
-    echo ""
-done
+echo fin
